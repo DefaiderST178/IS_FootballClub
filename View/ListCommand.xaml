@@ -1,0 +1,44 @@
+﻿<Window x:Class="IS_FootballClub.View.ListCommand"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IS_FootballClub.View"
+        mc:Ignorable="d"
+        Title="Список команд" Height="450" Width="800" Style="{StaticResource WindowStyle}">
+    <Viewbox>
+        <Border Style="{StaticResource BorderStyle}" Height="450" Width="820">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="6*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Список команд" Style="{StaticResource TitleTextStyle}" Grid.Row="0" Grid.Column="0"/>
+
+                <!--Список команд-->
+                <ListView Background="Ivory" Grid.Row="1" Grid.Column="0" Margin="5">
+                    
+                </ListView>
+                
+                <!--Панель кнопок-->
+                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">
+                    <TextBlock Text="Выберите команду -->"/>
+                    <ComboBox x:Name="CommandCB"/>
+                    <Button Content="Выбрать"/>
+                </StackPanel>
+
+
+                <!--Столбец 2-->
+                <Image Source="/Image/logo.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="5" />
+                <Button Content="Выйти" Grid.Column="1" Grid.Row="3" Style="{StaticResource ExitButtonStyle}"/>
+
+            </Grid>
+        </Border>
+    </Viewbox>
+</Window>

@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="Авторизация" Height="300" Width="500" Style="{StaticResource WindowStyle}">
     <Viewbox>
-        <Border Style="{StaticResource BorderStyle}" Height="300" Width="520">
+        <Border Style="{StaticResource BorderStyle}" Height="300" Width="520" MinHeight="300" MinWidth="520">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="85*"/>
-                    <RowDefinition Height="63*"/>
-                    <RowDefinition Height="63*"/>
-                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="7*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*"/>
