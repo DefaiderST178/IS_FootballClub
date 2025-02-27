@@ -1,0 +1,45 @@
+﻿<Window x:Class="IS_FootballClub.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IS_FootballClub"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="300" Width="500" Style="{StaticResource WindowStyle}">
+    <Viewbox>
+        <Border Style="{StaticResource BorderStyle}" Height="300" Width="520">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="63*"/>
+                    <RowDefinition Height="63*"/>
+                    <RowDefinition Height="85*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Авторизация" Grid.Row="0" Grid.Column="0" Style="{StaticResource TitleTextStyle}"/>
+
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="Введите логин" />
+                    <TextBox x:Name="LogTB"/>
+                    <Image Source="/Image/user.png" Margin="5"/>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="Введите пароль"/>
+                    <PasswordBox x:Name="PasTB"/>
+                    <Image Source="/Image/pas.png" Margin="0,0,5,0"/>
+                </StackPanel>
+
+                <Button Content="Войти" Grid.Row="3" Grid.Column="0"/>
+
+                <!--Столбец 2-->
+                <Image Source="/Image/logo.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Margin="5" />
+                <Button Content="Выйти" Grid.Column="1" Grid.Row="3" Style="{StaticResource ExitButtonStyle}"/>
+            </Grid>
+        </Border>
+    </Viewbox>
+
+</Window>
