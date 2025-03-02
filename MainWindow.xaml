@@ -33,11 +33,11 @@
                     <Image Source="/Image/pas.png" Margin="0,0,5,0"/>
                 </StackPanel>
 
-                <Button Content="Войти" Grid.Row="3" Grid.Column="0"/>
+                <Button Content="Войти" x:Name="AutorizationBtn" Click="AutorizationBtn_Click" Grid.Row="3" Grid.Column="0"/>
 
                 <!--Столбец 2-->
                 <Image Source="/Image/logo.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Margin="5" />
-                <Button Content="Выйти" Grid.Column="1" Grid.Row="3" Style="{StaticResource ExitButtonStyle}"/>
+                <Button Content="Выйти" x:Name="ExitBtn" Click="ExitBtn_Click" Grid.Column="1" Grid.Row="3" Style="{StaticResource ExitButtonStyle}"/>
             </Grid>
         </Border>
     </Viewbox>

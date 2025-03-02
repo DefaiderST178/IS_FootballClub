@@ -5,36 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IS_FootballClub.View"
         mc:Ignorable="d"
-        Title="История матчей" Height="450" Width="800" Style="{StaticResource WindowStyle}" MinHeight="450" MinWidth="800">
+        Title="История матчей" Height="500" Width="850" Style="{StaticResource WindowStyle}" MinHeight="450" MinWidth="800">
     <Viewbox>
-        <Border Style="{StaticResource BorderStyle}" Height="450" Width="820">
+        <Border Style="{StaticResource BorderStyle}" Height="500" Width="870">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="6*"/>
-                    <RowDefinition Height="18*"/>
-                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="59*"/>
+                    <RowDefinition Height="141*"/>
+                    <RowDefinition Height="50*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="История матчей" Style="{StaticResource TitleTextStyle}" Grid.Row="0" Grid.Column="0"/>
+                <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" >
+                    <TextBlock Text="История матча " Style="{StaticResource TitleTextStyle}"/>
+                    <TextBlock x:Name="NameMatchTB" Text="Название" Style="{StaticResource TitleTextStyle}"/>
+                </StackPanel>
 
-                <!--Список-->
-                <!--<ScrollViewer Grid.Row="1" Grid.Column="0" Margin="0,0,10,0">
-                    <ListView Padding="10" Background="Ivory" Margin="5">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>-->
-                                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
-                                    <!--Сетка матчей-->
-                    <Grid Height="240" >
+                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
+                    <Grid Height="350" >
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="8*"/>
-                            <RowDefinition Height="8*"/>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="4*"/>
-                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="69*"/>
+                            <RowDefinition Height="69*"/>
+                            <RowDefinition Height="51*"/>
+                            <RowDefinition Height="46*"/>
+                            <RowDefinition Height="5*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="5*"/>
@@ -42,38 +39,28 @@
                             <ColumnDefinition Width="5*"/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock x:Name="ResultMatch" Text="Результат матча" Style="{StaticResource TitleTextStyle}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
-
-                        <TextBlock Text="Юность" Grid.Row="1" Grid.Column="0" FontSize="20"/>
-                        <TextBlock Text="Команда противника" Grid.Row="1" Grid.Column="2" FontSize="20"/>
-
-                        <TextBlock Text="0" Style="{StaticResource TitleTextStyle}" Grid.Row="2" Grid.Column="0"/>
-                        <TextBlock Text=" : " Style="{StaticResource TitleTextStyle}" Grid.Row="2" Grid.Column="1"/>
-                        <TextBlock Text="0" Style="{StaticResource TitleTextStyle}" Grid.Row="2" Grid.Column="2"/>
-
-                        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="0" HorizontalAlignment="Center">
-                            <TextBlock Text="Дата проведения матча: " />
-                            <TextBlock Text="00/00/0000 00-00-00"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" >
+                            <TextBlock Text="Результат матча: " Style="{StaticResource TitleTextStyle}" />
+                            <TextBlock x:Name="ResultMatchTB" Text="Результат" Style="{StaticResource TitleTextStyle}" />
                         </StackPanel>
 
+                        <TextBlock Text="Юность" x:Name="TeamTB" Grid.Row="1" Style="{StaticResource TitleTextStyle}"/>
+                        <TextBlock Text="Оппонент" x:Name="EnemyTeamTB" Grid.Row="1" Grid.Column="2" Style="{StaticResource TitleTextStyle}"/>
+
+                        <TextBlock Text="0" x:Name="ScoreTB" Style="{StaticResource TitleTextStyle}" Grid.Row="2" />
+                        <TextBlock Text=" : " Style="{StaticResource TitleTextStyle}" Grid.Row="2" Grid.Column="1" />
+                        <TextBlock Text="0" x:Name="EnemyScoreTB" Style="{StaticResource TitleTextStyle}" Grid.Row="2" Grid.Column="2" />
+
+                        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" >
+                            <TextBlock Text="Дата проведения матча: "/>
+                            <TextBlock Text="00/00/0000 00-00-00" x:Name="DateMatchTB"/>
+                        </StackPanel>
                     </Grid>
-
-                </StackPanel>
-                            <!--</DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </ScrollViewer>-->
-
-                <!--Панель кнопок-->
-                <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
-                    <Button Content="Кнопка"/>
-                    <Button Content="Кнопка"/>
-                    <Button Content="Кнопка"/>
                 </StackPanel>
 
                 <!--Столбец 2-->
-                <Image Source="/Image/logo.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="5" />
-                <Button Content="Выйти" Grid.Column="1" Grid.Row="3" Style="{StaticResource ExitButtonStyle}"/>
+                <Image Source="/Image/logo.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"  />
+                <Button Content="Назад" x:Name="BackNavBtn" Click="BackNavBtn_Click" Grid.Column="1" Grid.Row="2" Style="{StaticResource ExitButtonStyle}" />
 
             </Grid>
         </Border>

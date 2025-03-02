@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using IS_FootballClub.View;
 
 namespace IS_FootballClub
 {
@@ -20,9 +9,43 @@ namespace IS_FootballClub
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        // Авторизация
+        private void AutorizationBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string login = "";
+                string password = "";
+
+                ListOfMatches open = new ListOfMatches();
+                this.Hide();
+                open.Show();
+                this.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка " + ex.Message, "Системная ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        // Выход
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка " + ex.Message, "Системная ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

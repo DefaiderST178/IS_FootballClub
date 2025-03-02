@@ -1,0 +1,49 @@
+﻿<Window x:Class="IS_FootballClub.View.ListOfMatches"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IS_FootballClub.View"
+        mc:Ignorable="d"
+        Title="Список матчей" Height="450" Width="800" Style="{StaticResource WindowStyle}" MinHeight="450" MinWidth="800">
+    <Viewbox>
+        <Border Height="450" Width="820" Style="{StaticResource BorderStyle}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="6*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Список матчей" Style="{StaticResource TitleTextStyle}" Grid.Row="0" Grid.Column="0"/>
+
+                <!--Список матчей-->
+                <DataGrid x:Name="MatchesDG" Background="Ivory" AutoGenerateColumns="False" Grid.Row="1" Grid.Column="0" Margin="5">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Матч" Width="60" Binding="{Binding ID_Match}"/>
+                        <DataGridTextColumn Header="Название" Width="140" Binding="{Binding Name}"/>
+                        <DataGridTextColumn Header="Дата проведения" Width="200" Binding="{Binding DateOfMatch}"/>
+                        <DataGridTextColumn Header="Стадион" Width="150" Binding="{Binding Location}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!--Панель кнопок-->
+                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">
+                    <TextBlock Text="Выберите матч -->"/>
+                    <ComboBox x:Name="MatchCB" DisplayMemberPath="ID_Match"/>
+                    <Button Content="Выбрать" x:Name="SelectMatchBtn" Click="SelectMatchBtn_Click"/>
+                </StackPanel>
+
+
+                <!--Столбец 2-->
+                <Image Source="/Image/logo.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="5" />
+                <Button Content="Назад" Grid.Column="1" Grid.Row="3" Style="{StaticResource ExitButtonStyle}"/>
+
+            </Grid>
+        </Border>
+    </Viewbox>
+</Window>

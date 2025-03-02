@@ -5,6 +5,7 @@
     <Style TargetType="Window" x:Key="WindowStyle">
         <Setter Property="Background" Value="{StaticResource BackGroundColor}"/>
         <Setter Property="Icon" Value="/Image/logo.png"/>
+        <Setter Property="WindowState" Value="Maximized"/>
     </Style>
 
     <!--Контейнеры-->

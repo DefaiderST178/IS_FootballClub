@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using IS_FootballClub.Model;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace IS_FootballClub.View
 {
@@ -19,9 +9,17 @@ namespace IS_FootballClub.View
     /// </summary>
     public partial class ListCommand : Window
     {
+        FootballClubEntities DB = new FootballClubEntities();
         public ListCommand()
         {
             InitializeComponent();
+            TeamList.ItemsSource = DB.Teams.ToList();
+            TeamCB.ItemsSource = DB.Teams.ToList();
+        }
+
+        private void SelectTeamBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
