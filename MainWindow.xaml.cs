@@ -23,9 +23,9 @@ namespace IS_FootballClub
                 string login = "";
                 string password = "";
 
-                ManagerWindow open = new ManagerWindow();
+                ManagerWindow managerWindow = new ManagerWindow();
                 this.Hide();
-                open.Show();
+                managerWindow.Show();
                 this.Close();
 
             }
