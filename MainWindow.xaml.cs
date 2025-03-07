@@ -23,7 +23,7 @@ namespace IS_FootballClub
                 string login = "";
                 string password = "";
 
-                ListOfMatches open = new ListOfMatches();
+                ManagerWindow open = new ManagerWindow();
                 this.Hide();
                 open.Show();
                 this.Close();

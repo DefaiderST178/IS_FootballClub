@@ -118,8 +118,14 @@
     <Compile Include="View\ListOfMatches.xaml.cs">
       <DependentUpon>ListOfMatches.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ManagerWindow.xaml.cs">
+      <DependentUpon>ManagerWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MatchHistory.xaml.cs">
       <DependentUpon>MatchHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TrainerWindow.xaml.cs">
+      <DependentUpon>TrainerWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -149,7 +155,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MatchHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TrainerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,6 +211,12 @@
     <Resource Include="Image\user.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Image\add_match.png" />
+    <Resource Include="Image\add_user.png" />
+    <Resource Include="Image\stata.png" />
+    <Resource Include="Image\story.png" />
+    <Resource Include="Image\team.png" />
+    <Resource Include="Image\trainer.png" />
     <Content Include="Model\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>

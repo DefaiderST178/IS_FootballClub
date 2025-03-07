@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IS_FootballClub"
         mc:Ignorable="d"
-        Title="Авторизация" Height="300" Width="500" Style="{StaticResource WindowStyle}">
+        Title="Авторизация" Height="300" Width="500" MinHeight="300" MinWidth="500" Style="{StaticResource WindowStyle}">
     <Viewbox>
-        <Border Style="{StaticResource BorderStyle}" Height="300" Width="520" MinHeight="300" MinWidth="520">
+        <Border Style="{StaticResource BorderStyle}" Height="300" Width="520" >
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="7*"/>
