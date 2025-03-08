@@ -32,9 +32,7 @@ namespace IS_FootballClub.View
             try
             {
                 ListOfMatches listOfMatches = new ListOfMatches();
-                this.Hide();
-                listOfMatches.Show();
-                this.Close();
+                listOfMatches.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -48,9 +46,7 @@ namespace IS_FootballClub.View
             try
             {
                 StataWindow stataWindow = new StataWindow();
-                this.Hide();
-                stataWindow.Show();
-                this.Close();
+                stataWindow.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -67,7 +63,15 @@ namespace IS_FootballClub.View
         // Переход к окну команд
         private void TeamsBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                ListCommand listCommand = new ListCommand();
+                listCommand.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка " + ex.Message, "Системная ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

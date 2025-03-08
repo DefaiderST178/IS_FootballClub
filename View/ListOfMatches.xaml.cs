@@ -35,5 +35,18 @@ namespace IS_FootballClub.View
                 MessageBox.Show("Ошибка - выберите матч перед нажатием на кнопку! " + ex.Message, "Системная ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        // Выход
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка " + ex.Message, "Системная ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

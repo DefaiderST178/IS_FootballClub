@@ -1,9 +1,6 @@
 ﻿using IS_FootballClub.Model;
 using System;
-using System.Data.Entity;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace IS_FootballClub.View
@@ -39,7 +36,7 @@ namespace IS_FootballClub.View
             }
         }
 
-        // Вывод после выбора
+        // Вывод результатов после выбора
         private void lstTeams_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (lstTeams.SelectedItem is Teams selectedTeam)

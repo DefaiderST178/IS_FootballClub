@@ -124,6 +124,9 @@
     <Compile Include="View\MatchHistory.xaml.cs">
       <DependentUpon>MatchHistory.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PlayersWindow.xaml.cs">
+      <DependentUpon>PlayersWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\StataWindow.xaml.cs">
       <DependentUpon>StataWindow.xaml</DependentUpon>
     </Compile>
@@ -163,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MatchHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PlayersWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

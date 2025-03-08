@@ -41,7 +41,7 @@
 
                 <!--Столбец 2-->
                 <Image Source="/Image/logo.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="5" />
-                <Button Content="Назад" Grid.Column="1" Grid.Row="3" Style="{StaticResource ExitButtonStyle}"/>
+                <Button Content="Выйти" x:Name="ExitBtn" Click="ExitBtn_Click" Grid.Column="1" Grid.Row="3" Style="{StaticResource ExitButtonStyle}"/>
 
             </Grid>
         </Border>

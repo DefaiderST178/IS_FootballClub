@@ -22,44 +22,31 @@
                 <TextBlock Text="Список команд" Style="{StaticResource TitleTextStyle}" Grid.Row="0" Grid.Column="0"/>
 
                 <!--Список команд-->
-                <ListView Background="Ivory" x:Name="TeamList" Grid.Row="1" Grid.Column="0" Margin="5">
+                <ListView Background="Ivory" x:Name="TeamList" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Margin="10"
+                          SelectionChanged="TeamList_SelectionChanged">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Vertical">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="6*"/>
-                                        <RowDefinition Height="6*"/>
-                                        <RowDefinition Height="6*"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="2*"/>
-                                        <ColumnDefinition Width="2*"/>
-                                    </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Vertical" Margin="0">
+                                    <StackPanel Orientation="Horizontal" Grid.Row="0">
+                                        <TextBlock Text="№ "/>
+                                        <TextBlock Text="{Binding ID_Team}" />
+                                    </StackPanel>
 
-                                    <TextBlock Text="Номер команды" Grid.Row="0" Grid.Column="0"/>
-                                    <TextBlock Text="Название" Grid.Row="1" Grid.Column="0"/>
-                                    <TextBlock Text="Номер тренера" Grid.Row="2" Grid.Column="0"/>
-
-                                    <TextBlock Text="{Binding ID_Team}" Grid.Row="0" Grid.Column="1"/>
-                                    <TextBlock Text="{Binding Name	}" Grid.Row="1" Grid.Column="1"/>
-                                    <TextBlock Text="{Binding Id_Trainer}" Grid.Row="2" Grid.Column="1"/>
-                                </Grid>
+                                    <StackPanel Orientation="Horizontal" Grid.Row="1">
+                                        <TextBlock Text="Название «"/>
+                                        <TextBlock Text="{Binding Name}" />
+                                        <TextBlock Text="»"/>
+                                    </StackPanel>
+                                </StackPanel>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                
-                <!--Панель кнопок-->
-                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">
-                    <TextBlock Text="Выберите команду -->"/>
-                    <ComboBox x:Name="TeamCB" DisplayMemberPath="ID_Team"/>
-                    <Button Content="Выбрать" x:Name="SelectTeamBtn" Click="SelectTeamBtn_Click"/>
-                </StackPanel>
-
+                     
                 <!--Столбец 2-->
                 <Image Source="/Image/logo.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="5" />
-                <Button Content="Назад" Grid.Column="1" Grid.Row="3" Style="{StaticResource ExitButtonStyle}"/>
+                <Button Content="Выйти" x:Name="ExitBtn" Click="ExitBtn_Click" Grid.Column="1" Grid.Row="3" Style="{StaticResource ExitButtonStyle}"/>
 
             </Grid>
         </Border>

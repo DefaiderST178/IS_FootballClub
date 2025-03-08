@@ -32,9 +32,7 @@ namespace IS_FootballClub.View
             try
             {
                 ListOfMatches listOfMatches = new ListOfMatches();
-                this.Hide();
-                listOfMatches.Show();
-                this.Close();
+                listOfMatches.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -48,9 +46,7 @@ namespace IS_FootballClub.View
             try
             {
                 StataWindow stataWindow = new StataWindow();
-                this.Hide();
-                stataWindow.Show();
-                this.Close();
+                stataWindow.ShowDialog();
             }
             catch (Exception ex)
             {
