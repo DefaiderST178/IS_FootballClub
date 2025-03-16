@@ -112,6 +112,12 @@
     <Compile Include="Model\Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\AddMatch.xaml.cs">
+      <DependentUpon>AddMatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddPlayer.xaml.cs">
+      <DependentUpon>AddPlayer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ListCommand.xaml.cs">
       <DependentUpon>ListCommand.xaml</DependentUpon>
     </Compile>
@@ -129,6 +135,9 @@
     </Compile>
     <Compile Include="View\StataWindow.xaml.cs">
       <DependentUpon>StataWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TrainersInfo.xaml.cs">
+      <DependentUpon>TrainersInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TrainerWindow.xaml.cs">
       <DependentUpon>TrainerWindow.xaml</DependentUpon>
@@ -153,6 +162,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AddMatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ListCommand.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,6 +191,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\StataWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TrainersInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

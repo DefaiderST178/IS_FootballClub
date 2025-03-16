@@ -57,13 +57,29 @@ namespace IS_FootballClub.View
         // Переход к окну добавления игроков
         private void AddPlayerBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                AddPlayer addPlayer = new AddPlayer();
+                addPlayer.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка " + ex.Message, "Системная ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         // Переход к окну добавления матча
         private void AddMatchBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                AddMatch addMatch = new AddMatch();
+                addMatch.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка " + ex.Message, "Системная ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

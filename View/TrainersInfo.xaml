@@ -1,0 +1,50 @@
+﻿<Window x:Class="IS_FootballClub.View.TrainersInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IS_FootballClub.View"
+        mc:Ignorable="d"
+        Title="Информация о тренерах" Height="450" Width="800" Style="{StaticResource WindowStyle}">
+    <Viewbox>
+        <Border Style="{StaticResource BorderStyle}" Height="450" Width="820">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Информация о тренерах" Grid.Row="0" Grid.Column="0" Style="{StaticResource TitleTextStyle}"/>
+
+                <ListView Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Background="Ivory" Margin="10" x:Name="TrainersList">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical" Margin="0">
+                                <StackPanel Orientation="Horizontal" Grid.Row="0">
+                                    <TextBlock Text="{Binding Id_Role}" />
+                                    <TextBlock Text=" - "/>
+                                    <TextBlock Text="{Binding FIO}" />
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                                    <TextBlock Text="Телефон: "/>
+                                    <TextBlock Text="{Binding Phone}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!--Столбец 2-->
+                <Image Source="/Image/logo.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="5" />
+                <Button Content="Выйти" x:Name="ExitBtn" Click="ExitBtn_Click" Grid.Column="1" Grid.Row="3" Style="{StaticResource ExitButtonStyle}"/>
+
+            </Grid>
+        </Border>
+    </Viewbox>
+</Window>

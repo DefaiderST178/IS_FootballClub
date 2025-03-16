@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using IS_FootballClub.Model;
 using IS_FootballClub.View;

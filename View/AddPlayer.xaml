@@ -1,0 +1,64 @@
+﻿<Window x:Class="IS_FootballClub.View.AddPlayer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IS_FootballClub.View"
+        mc:Ignorable="d"
+        Title="Добавление игрока" Height="500" Width="800" MinHeight="500" MinWidth="800" Style="{StaticResource WindowStyle}">
+    <Viewbox>
+        <Border Style="{StaticResource BorderStyle}" Height="500" Width="820" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="7*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Добавление игрока" Grid.Row="0" Grid.Column="0" Style="{StaticResource TitleTextStyle}"/>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Margin="35,10,10,10">
+                    <TextBlock Text="Введите имя"/>
+                    <TextBox x:Name="NameTB" Width="190" Margin="50,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Margin="35,10,10,10">
+                    <TextBlock Text="Введите фамилию"/>
+                    <TextBox x:Name="LastNameTB" Width="190"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="0" Margin="35,10,10,10">
+                    <TextBlock Text="Выберите дату рождения"/>
+                    <DatePicker x:Name="DateBirthTB" Width="190" Margin="5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" Margin="35,10,10,10">
+                    <TextBlock Text="Выберите группу"/>
+                    <ComboBox Width="200" DisplayMemberPath="ID_Group" x:Name="GroupCB"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="0" Margin="35,10,10,10">
+                    <TextBlock Text="Выберите роль"/>
+                    <ComboBox Width="200" x:Name="RoleCB" Margin="15,0,0,0">
+                        <TextBlock>Вратарь</TextBlock>
+                        <TextBlock>Защитник</TextBlock>
+                        <TextBlock>Полузащитник</TextBlock>
+                        <TextBlock>Нападающий</TextBlock>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="0">
+                    <Button Content="Добавить игрока" x:Name="AddPlayerBtn" Click="AddPlayerBtn_Click"/>
+                </StackPanel>
+
+                <!--Столбец 2-->
+                <Image Source="/Image/logo.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="6" Margin="5" />
+                <Button Content="Выйти" x:Name="ExitBtn" Click="ExitBtn_Click" Grid.Column="1" Grid.Row="6" Style="{StaticResource ExitButtonStyle}"/>
+            </Grid>
+        </Border>
+    </Viewbox>
+</Window>

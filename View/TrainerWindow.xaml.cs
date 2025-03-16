@@ -57,7 +57,15 @@ namespace IS_FootballClub.View
         // Переход к окну тренеров
         private void TrainersBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                TrainersInfo trainersInfo = new TrainersInfo();
+                trainersInfo.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка " + ex.Message, "Системная ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         // Переход к окну команд
